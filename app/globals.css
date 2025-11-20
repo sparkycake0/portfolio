@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@custom-variant dark (&: where(.dark, .dark *));
+
+@theme {
+  --color-bg: #bae6fd;
+  --color-fg: #082f49;
+
+  --color-border: #075985;
+  --color-hover: #87cff5;
+  --color-shadow: #082f49;
+}
+
+.dark {
+  --color-bg: #170833;
+  --color-fg: #c4b5fd;
+
+  --color-border: #a78bfa;
+  --color-hover: #2d0270;
+  --color-shadow: #170833;
+}
+button {
+  @apply cursor-pointer;
+}
