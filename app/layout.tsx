@@ -5,7 +5,6 @@ import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 
 const font = Martian_Mono({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
@@ -21,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${font.className} antialiased bg-bg text-fg flex flex-col`}
-      >
+      <body className={`${font.className} bg-bg text-fg flex flex-col`}>
         <ThemeProvider>
           <Navbar />
           {children}

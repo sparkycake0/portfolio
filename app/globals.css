@@ -19,7 +19,6 @@
   --color-shadow: #170833;
 }
 * {
-  overflow-x: hidden;
   scrollbar-width: none;
 }
 *::-webkit-scrollbar {
