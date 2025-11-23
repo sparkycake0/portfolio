@@ -10,7 +10,7 @@ export default function ThemeButton() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full bg-bg outline-none border-0 -translate-x-0.5 px-4 p-1.5 hover:bg-hover transition-colors duration-300"
+      className="rounded-full bg-bg outline-none border-0 -translate-x-0.5 px-4 p-1.5 hover:bg-hover transition-colors duration-300 w-min h-min"
     >
       {theme === "dark" ? (
         <Moon size={32} className="text-fg" />

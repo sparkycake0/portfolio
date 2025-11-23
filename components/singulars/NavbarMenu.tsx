@@ -3,7 +3,8 @@
 import { X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { navItems } from "../Navbar";
+import { navItems, ScrollToId } from "../Navbar";
+import ThemeButton from "./ThemeButton";
 
 export default function NavbarMenu() {
   const [menu, setMenu] = useState(false);
@@ -12,7 +13,7 @@ export default function NavbarMenu() {
     <div>
       <button
         onClick={() => setMenu(true)}
-        className="lg:hidden flex hover:*:bg-hover transition-colors duration-500 items-center mr-8 *:w-6 *:h-1 *:bg-bg flex-col gap-1"
+        className="lg:hidden z-50 flex hover:*:bg-hover transition-colors duration-500 items-center mr-8 *:w-6 *:h-1 *:bg-bg flex-col gap-1"
       >
         <div></div>
         <div></div>
@@ -26,7 +27,7 @@ export default function NavbarMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="absolute z-50 top-0 left-0 backdrop-blur-lg backdrop-brightness-75 w-screen h-screen text-fg"
+            className="fixed z-50 top-0 left-0 backdrop-blur-lg backdrop-brightness-75 w-screen h-screen text-fg"
           >
             {/* CLOSE BUTTON */}
             <motion.button
@@ -71,6 +72,10 @@ export default function NavbarMenu() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     className="flex w-full bg-fg text-bg p-2 rounded-full justify-between gap-4 hover:bg-hover hover:text-fg transition-colors duration-500"
+                    onClick={() => {
+                      ScrollToId(item.id);
+                      setMenu(false);
+                    }}
                   >
                     <h1>{item.name}</h1>
                     <Icon />

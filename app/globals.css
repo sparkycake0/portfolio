@@ -18,6 +18,12 @@
   --color-hover: #2d0270;
   --color-shadow: #170833;
 }
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
 button {
   @apply cursor-pointer;
 }
