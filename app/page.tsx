@@ -62,7 +62,7 @@ export default function Home() {
                   animate="visible"
                   variants={variants as any}
                   exit="exit"
-                  className="translate-x-24"
+                  className="-translate-x-12 w-min"
                   onClick={() => setClick(!click)}
                 >
                   <Moon size={160} />

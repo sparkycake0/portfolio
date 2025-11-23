@@ -15,15 +15,7 @@ export const projects = [
       "Interactive application for management of your projects and keeping track of it.",
     longDescription:
       "CollabSpace is a full-featured project management platform that allows teams to collaborate in real time. It offers task tracking, live updates via sockets, and optimized performance with React Query and Prisma for seamless data handling.",
-    tech: [
-      "NextJS",
-      "Node.js",
-      "Prisma",
-      "Fastify",
-      "SocketIO",
-      "API",
-      "React Query",
-    ],
+    tech: ["NextJS", "Prisma", "Fastify", "SocketIO", "API", "React Query"],
     features: [
       "Real-time collaboration",
       "Live task updates",

@@ -14,7 +14,7 @@ export default function Moon({ size = 84 }: { size?: number }) {
       whileTap={{
         rotate: "80deg",
       }}
-      className="rounded-full -rotate-40 -translate-x-24"
+      className="rounded-full -rotate-40 w-min -translate-x-24"
       style={{ width: size, height: size }}
       aria-label="Crescent moon icon"
       role="img"
