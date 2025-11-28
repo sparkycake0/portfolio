@@ -52,7 +52,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full z-50 p-2 fixed left-1/2 -translate-x-1/2 flex justify-center">
+    <div className="w-full z-50 fixed left-1/2 -translate-x-1/2 flex justify-center">
       <motion.div
         className="bg-fg gap-4 w-11/12 flex justify-between text-bg items-center shadow-md shadow-shadow rounded-full m-4 origin-center"
         initial="hidden"
@@ -64,7 +64,7 @@ export default function Navbar() {
 
         <motion.h1
           variants={itemVariants}
-          className="select-none w-min font-semibold text-lg"
+          className="select-none w-max text-center font-semibold text-lg"
         >
           Ognjen Rajkovic
         </motion.h1>
