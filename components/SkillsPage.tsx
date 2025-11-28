@@ -4,8 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, ChevronDown } from "lucide-react";
 
+interface Skill {
+  name: string;
+  category?: string; // optional because personal skills don't have category
+}
+
 // GENERAL TECHNICAL SKILLS
-const generalSkills = [
+const generalSkills: Skill[] = [
   { name: "JavaScript", category: "Languages" },
   { name: "TypeScript", category: "Languages" },
   { name: "Rust", category: "Languages" },
@@ -32,7 +37,7 @@ const generalSkills = [
   { name: "Linux", category: "Systems & Dev Environment" },
 ];
 
-const personalSkills = [
+const personalSkills: Skill[] = [
   { name: "Teamwork" },
   { name: "Consistency" },
   { name: "Strong Will to Learn" },
@@ -43,15 +48,23 @@ const personalSkills = [
   { name: "Self-Motivation" },
   { name: "Reliability" },
 ];
-const createCategories = (skills) => [
+
+const createCategories = (skills: Skill[]): string[] => [
   "All",
-  ...Array.from(new Set(skills.map((s) => s.category))),
+  ...Array.from(
+    new Set(skills.map((s) => s.category).filter(Boolean) as string[]),
+  ),
 ];
 
-const SkillsSection = ({ title, skills }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+interface SkillsSectionProps {
+  title: string;
+  skills: Skill[];
+}
+
+const SkillsSection: React.FC<SkillsSectionProps> = ({ title, skills }) => {
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
   const categories = createCategories(skills);
 
@@ -59,8 +72,13 @@ const SkillsSection = ({ title, skills }) => {
     const matchesSearch = skill.name
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
+
+    // If skill has no category (personal skills), include it anyway
+    if (!skill.category) return matchesSearch;
+
     const matchesCategory =
       selectedCategory === "All" || skill.category === selectedCategory;
+
     return matchesSearch && matchesCategory;
   });
 
@@ -99,7 +117,6 @@ const SkillsSection = ({ title, skills }) => {
           </div>
         </div>
 
-        {/* Only show dropdown for non-personal skills */}
         {!isPersonalSection && (
           <div className="relative sm:w-48">
             <div className="absolute inset-0 bg-border rounded-xl translate-x-1 translate-y-1 -z-10"></div>
@@ -177,7 +194,7 @@ const SkillsSection = ({ title, skills }) => {
   );
 };
 
-const SkillsPage = () => {
+const SkillsPage: React.FC = () => {
   return (
     <div id="skillsPage" className="w-full min-h-max bg-bg py-20 px-4">
       <div className="max-w-6xl mx-auto">
