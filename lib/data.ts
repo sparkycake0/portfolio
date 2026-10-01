@@ -68,6 +68,7 @@ export const projects: Project[] = [
     ],
     stack: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
     image: spaceCode,
+    liveUrl: "https://spacecodeagency.vercel.app",
     githubUrl: "https://github.com/sparkycake0/SpaceCode",
     tone: { bg: "#30392d", block: "#60715b", accent: "#aebbaa" },
   },
