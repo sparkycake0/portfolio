@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, monospace;
+
+  --color-blue-slate-50: #f1f2f3;
+  --color-blue-slate-100: #e3e4e8;
+  --color-blue-slate-200: #c7c9d1;
+  --color-blue-slate-300: #acaeb9;
+  --color-blue-slate-400: #9093a2;
+  --color-blue-slate-500: #74798b;
+  --color-blue-slate-600: #5d606f;
+  --color-blue-slate-700: #464853;
+  --color-blue-slate-800: #2e3038;
+  --color-blue-slate-900: #17181c;
+  --color-blue-slate-950: #101113;
+
+  --color-muted-teal-50: #f0f4f2;
+  --color-muted-teal-100: #e2e9e6;
+  --color-muted-teal-200: #c5d3cd;
+  --color-muted-teal-300: #a8bdb4;
+  --color-muted-teal-400: #8ba79b;
+  --color-muted-teal-500: #6e9182;
+  --color-muted-teal-600: #587468;
+  --color-muted-teal-700: #42574e;
+  --color-muted-teal-800: #2c3a34;
+  --color-muted-teal-900: #161d1a;
+  --color-muted-teal-950: #0f1412;
+
+  /* the second "muted-teal" scale in the brief is a green, so it is named "moss" here */
+  --color-moss-50: #f2f4f1;
+  --color-moss-100: #e4e8e3;
+  --color-moss-200: #c9d2c6;
+  --color-moss-300: #aebbaa;
+  --color-moss-400: #93a48e;
+  --color-moss-500: #788e71;
+  --color-moss-600: #60715b;
+  --color-moss-700: #485544;
+  --color-moss-800: #30392d;
+  --color-moss-900: #181c17;
+  --color-moss-950: #111410;
+
+  --color-dry-sage-50: #f6f5ef;
+  --color-dry-sage-100: #edeade;
+  --color-dry-sage-200: #dbd5bd;
+  --color-dry-sage-300: #c9c19c;
+  --color-dry-sage-400: #b7ac7b;
+  --color-dry-sage-500: #a4975b;
+  --color-dry-sage-600: #847948;
+  --color-dry-sage-700: #635b36;
+  --color-dry-sage-800: #423c24;
+  --color-dry-sage-900: #211e12;
+  --color-dry-sage-950: #17150d;
+
+  --color-almond-cream-50: #f9f2eb;
+  --color-almond-cream-100: #f4e5d7;
+  --color-almond-cream-200: #e9caaf;
+  --color-almond-cream-300: #ddb088;
+  --color-almond-cream-400: #d29560;
+  --color-almond-cream-500: #c77b38;
+  --color-almond-cream-600: #9f622d;
+  --color-almond-cream-700: #774a22;
+  --color-almond-cream-800: #503116;
+  --color-almond-cream-900: #28190b;
+  --color-almond-cream-950: #1c1108;
+}
+
+html {
+  background: var(--color-blue-slate-950);
+  color: var(--color-blue-slate-100);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+body {
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+::selection { background: var(--color-almond-cream-400); color: var(--color-blue-slate-950); }
+
+:focus-visible {
+  outline: 2px solid var(--color-almond-cream-400);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* swap the native cursor for the custom one on precise pointers only */
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor, html.has-cursor a, html.has-cursor button { cursor: none; }
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-blue-slate-600);
+}
+.dot-grid {
+  background-image: radial-gradient(var(--color-blue-slate-800) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
