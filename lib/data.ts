@@ -51,7 +51,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: flipsBalkan,
     liveUrl: "https://flipsbalkan.vercel.app",
-    githubUrl: "https://github.com/sparkycake0/FlipsBalkan",
+    githubUrl: "https://github.com/getspacecode/FlipsBalkan",
     tone: { bg: "#2c3a34", block: "#587468", accent: "#a8bdb4" },
   },
   {
@@ -69,8 +69,26 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
     image: spaceCode,
     liveUrl: "https://spacecodeagency.vercel.app",
-    githubUrl: "https://github.com/sparkycake0/SpaceCode",
+    githubUrl: "https://github.com/getspacecode/SpaceCode",
     tone: { bg: "#30392d", block: "#60715b", accent: "#aebbaa" },
+  },
+  {
+    name: "Mihajlovic Barbershop",
+    type: "Barbershop with appointment system",
+    description:
+      "Fully animated barbershop wit appointment system along with authentication",
+    role: "Fully making all systems and design",
+    features: [
+      "Appointment System",
+      "Authentication with OAuth",
+      "Full admin page with managment",
+      "Responsive interface",
+    ],
+    stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS", "Framer Motion"],
+    image: spaceCode,
+    liveUrl: "https://mihajlovic-barbershop.vercel.app",
+    githubUrl: "https://github.com/getspacecode/MihajlovicBarbershop",
+    tone: { bg: "#fad087", block: "#f0ddbd", accent: "#aebbaa" },
   },
 ];
 
