@@ -11,7 +11,7 @@ export const profile = {
   phoneHref: "tel:+381611926474",
   github: "https://github.com/sparkycake0",
   instagram: "https://instagram.com/raajkovicc__",
-  agencyUrl: "https://spacecodeagency.vercel.app",
+  agencyUrl: "https://spacecodestudio.vercel.app",
 };
 
 export const nav = [
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     image: flipsBalkan,
     liveUrl: "https://flipsbalkan.vercel.app",
-    githubUrl: "https://github.com/sparkycake0/FlipsBalkan",
+    githubUrl: "https://github.com/getspacecode/FlipsBalkan",
     tone: { bg: "#5c543f", block: "#755c17", accent: "#a87f0d" },
   },
   {
@@ -68,8 +68,8 @@ export const projects: Project[] = [
     ],
     stack: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
     image: spaceCode,
-    liveUrl: "https://spacecodeagency.vercel.app",
-    githubUrl: "https://github.com/sparkycake0/SpaceCode",
+    liveUrl: "https://spacecodestudio.vercel.app",
+    githubUrl: "https://github.com/getspacecode/SpaceCode",
     tone: { bg: "#30573d", block: "#1b7a3b", accent: "#1bf263" },
   },
   {
