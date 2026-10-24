@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 import flipsBalkan from "@/assets/flipsbalkan.png";
 import spaceCode from "@/assets/spacecode.png";
-import royalShine from "@/assets/royalshine.png";
+import mihajlovic from "@/assets/mihajlovic.png";
 
 export const profile = {
   name: "Ognjen Rajković",
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     image: flipsBalkan,
     liveUrl: "https://flipsbalkan.vercel.app",
     githubUrl: "https://github.com/sparkycake0/FlipsBalkan",
-    tone: { bg: "#2c3a34", block: "#587468", accent: "#a8bdb4" },
+    tone: { bg: "#5c543f", block: "#755c17", accent: "#a87f0d" },
   },
   {
     name: "SpaceCode",
@@ -70,7 +70,31 @@ export const projects: Project[] = [
     image: spaceCode,
     liveUrl: "https://spacecodeagency.vercel.app",
     githubUrl: "https://github.com/sparkycake0/SpaceCode",
-    tone: { bg: "#30392d", block: "#60715b", accent: "#aebbaa" },
+    tone: { bg: "#30573d", block: "#1b7a3b", accent: "#1bf263" },
+  },
+  {
+    name: "Mihajlovic Barbershop",
+    type: "Barbershop with appointment system",
+    description:
+      "Barbershop website with appointment system, auth and OAuth, and full managing panel.",
+    role: "Fully developing UI/UX design along with all functionalities.",
+    features: [
+      "Appointment system",
+      "Authentication with OAuth",
+      "Admin panel",
+      "Responsive interface with animations",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Firebase",
+      "Tailwind CSS",
+      "Framer motion",
+    ],
+    image: mihajlovic,
+    liveUrl: "https://mihajlovic-barbershop.vercel.app",
+    githubUrl: "https://github.com/getspacecode/MihajlovicBarbershop",
+    tone: { bg: "#4a463a", block: "#4d452e", accent: "#d1a104" },
   },
 ];
 
@@ -103,6 +127,7 @@ export const skillGroups: Record<string, string[]> = {
     "Spring Boot",
     "Socket.IO",
     "REST APIs",
+    "GraphQL",
   ],
   Data: ["PostgreSQL", "Prisma", "Drizzle ORM", "Firebase"],
   Environment: ["Git", "GitHub", "Linux", "NixOS"],
